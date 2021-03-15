@@ -1,8 +1,6 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from os import system, name
-import colorama
-from colorama import Fore, Style
 import time
 import sys
     
@@ -21,7 +19,7 @@ def train():
 try:
 
   while True:
-    userInput= input(Fore.YELLOW+Style.BRIGHT+"▶ "+Fore.YELLOW+Style.BRIGHT).lower()
+    userInput= input("-> ").lower()
 
     if "cls" in userInput:
       cls()
@@ -30,15 +28,15 @@ try:
       quit()
 
     else:
-      print(Fore.BLUE+Style.BRIGHT+"▶ "+Fore.BLUE+Style.BRIGHT, end="")
+      print("-> ", end="")
       print(chatbot.get_response(userInput))
       print()
 
 
 except KeyboardInterrupt:
   print()
-  print(Fore.RED+" "+"\n Quitting ChatBot...")
+  print(" "+"\n Quitting ChatBot...")
   time.sleep(1)
-  print(Fore.RED+" "+"ChatBot Terminated")
+  print(" "+"ChatBot Terminated")
   print()
   quit()
