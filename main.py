@@ -21,11 +21,14 @@ try:
   while True:
     userInput= input("-> ").lower()
 
-    if "cls" in userInput:
+    if userInput == "cls":
       cls()
 
-    elif "exit" in userInput:
+    elif userInput == "exit":
       quit()
+
+    elif userInput == "train":
+      train()
 
     else:
       print("-> ", end="")
