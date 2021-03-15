@@ -4,5 +4,5 @@ This is a simple Chatbot made in Python using the [ChatterBot](https://pypi.org/
 
 Requirements:
 
-ChatterBot  
+* ChatterBot  
 ```pip install ChatterBot```
